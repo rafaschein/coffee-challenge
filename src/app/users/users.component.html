@@ -1,0 +1,36 @@
+<h2>Usuários</h2>
+
+<div class="user-form">
+  <input #userName />
+  <button (click)="add(userName.value); userName.value=''">
+    <i class="fa fa-plus"></i>
+  </button>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th class="table-id text-right">#</th>
+      <th>Nome</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td class="text-right">{{ user.id }}</td>
+      <td>{{ user.name | uppercase }}</td>
+      <td class="text-right">
+          <button class="update"
+                  title="Update user"
+                  routerLink="/detail/{{user.id}}">
+            <i class="fa fa-pencil"></i>
+          </button>
+        <button class="delete"
+                title="Delete user"
+                (click)="delete(user)">
+          <i class="fa fa-trash"></i>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

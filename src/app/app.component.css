@@ -1,0 +1,31 @@
+/* AppComponent's private CSS styles */
+h2 {
+  font-size: 2em;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.nav-top .title {
+  display: inline-block;
+}
+
+nav {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 0;
+}
+
+nav a {
+  color: #FFF;
+  padding: 0 15px;
+  font-size: 20px;
+}
+
+nav a:not(:last-child) {
+  border-right: 1px solid #FFF;
+}
