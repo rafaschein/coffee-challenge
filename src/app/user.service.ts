@@ -50,12 +50,19 @@ export class UserService {
   /** POST: add a new user to the server */
   addUser(user: User, numUsers: number): Observable<User> {
     let userOvserbable;
+    if (user.name.length < 3) {
+      this.log(`Nome do usuário deve ter pelo menos 3 caracteres`);
+      return null;
+    }
+
     if (numUsers === 0) {
       user.id = 100;
       userOvserbable = this.http.put(this.usersUrl, user, httpOptions);
     } else {
       userOvserbable = this.http.post<User>(this.usersUrl, user, httpOptions);
     }
+
+    this.messageService.clear();
     return userOvserbable;
   }
 

@@ -20,11 +20,11 @@
       <td class="text-right">{{ user.id }}</td>
       <td>{{ user.name | uppercase }}</td>
       <td class="text-right">
-          <button class="update"
-                  title="Update user"
-                  routerLink="/detail/{{user.id}}">
-            <i class="fa fa-pencil"></i>
-          </button>
+        <!--<button class="update"
+                title="Update user"
+                routerLink="/detail/{{user.id}}">
+          <i class="fa fa-pencil"></i>
+        </button>-->
         <button class="delete"
                 title="Delete user"
                 (click)="delete(user)">
