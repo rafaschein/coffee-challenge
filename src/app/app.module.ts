@@ -1,17 +1,18 @@
-import { NgModule }       from '@angular/core';
-import { BrowserModule }  from '@angular/platform-browser';
-import { FormsModule }    from '@angular/forms';
-import { HttpClientModule }    from '@angular/common/http';
+import { NgModule }         from '@angular/core';
+import { BrowserModule }    from '@angular/platform-browser';
+import { FormsModule }      from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService }  from './in-memory-data.service';
+import { InMemoryDataService }            from './in-memory-data.service';
 
 import { AppRoutingModule }     from './app-routing.module';
 
 import { AppComponent }         from './app.component';
 import { UserDetailComponent }  from './user-detail/user-detail.component';
-import { UsersComponent }      from './users/users.component';
+import { UsersComponent }       from './users/users.component';
 import { MessagesComponent }    from './messages/messages.component';
+import { DashboardComponent }   from './dashboard/dashboard.component';
 
 @NgModule({
   imports: [
@@ -32,6 +33,7 @@ import { MessagesComponent }    from './messages/messages.component';
     UsersComponent,
     UserDetailComponent,
     MessagesComponent,
+    DashboardComponent,
   ],
   bootstrap: [ AppComponent ]
 })

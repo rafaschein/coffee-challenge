@@ -1,0 +1,52 @@
+.btn {
+  width: 100%;
+  display: block;
+  background-color: gray;
+  color: white;
+  border: none;
+  padding: 15px 0;
+  margin: 30px 0;
+  border: 1px solid gray;
+  border-radius: 4px;
+}
+
+.btn.btn-shuffle {
+  background-color: #479c52;
+}
+
+.btn.btn-print {
+  background-color: white;
+  color: black;
+}
+
+.days {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.days .day {
+  width: 50%;
+  text-align: center;
+  border: 1px solid #757575;
+  margin: 0 5px;
+  border-radius: 4px;
+}
+
+.days .day header {
+  padding: 30px;
+  background-color: #757575;
+  color: white;
+  font-weight: bold;
+}
+
+.days .day .day-shift {
+  padding: 20px;
+  background-color: #c5c5c5;
+  color: #151414;
+}
+
+.days .day .user-choice {
+  padding: 15px;
+  color: #151414;
+}

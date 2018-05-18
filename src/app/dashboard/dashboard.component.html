@@ -1,0 +1,67 @@
+<button class="btn btn-shuffle no-print" (click)="shuffle()">
+  <i class="fa fa-refresh"></i>
+  <span *ngIf="users && users.length == 0"> Sortear</span>
+  <span *ngIf="users && users.length > 0"> Atualizar</span>
+</button>
+
+<div class="days" *ngIf="users && users.length > 0">
+  <div class="day">
+    <header>SEGUNDA-FEIRA</header>
+    <div class="day-shift">Manhã</div>
+    <div class="user-choice">
+      <span>{{ users[0].name | uppercase }}</span>
+    </div>
+    <div class="day-shift">Tarde</div>
+    <div class="user-choice">
+      <span>{{ users[1].name | uppercase }}</span>
+    </div>
+  </div>
+  <div class="day">
+    <header>TERÇA-FEIRA</header>
+    <div class="day-shift">Manhã</div>
+    <div class="user-choice">
+      <span>{{ users[2].name | uppercase }}</span>
+    </div>
+    <div class="day-shift">Tarde</div>
+    <div class="user-choice">
+      <span>{{ users[3].name | uppercase }}</span>
+    </div>
+  </div>
+  <div class="day">
+    <header>QUARTA-FEIRA</header>
+    <div class="day-shift">Manhã</div>
+    <div class="user-choice">
+      <span>{{ users[4].name | uppercase }}</span>
+    </div>
+    <div class="day-shift">Tarde</div>
+    <div class="user-choice">
+      <span>{{ users[5].name | uppercase }}</span>
+    </div>
+  </div>
+  <div class="day">
+    <header>QUINTA-FEIRA</header>
+    <div class="day-shift">Manhã</div>
+    <div class="user-choice">
+      <span>{{ users[6].name | uppercase }}</span>
+    </div>
+    <div class="day-shift">Tarde</div>
+    <div class="user-choice">
+      <span>{{ users[7].name | uppercase }}</span>
+    </div>
+  </div>
+  <div class="day">
+    <header>SEXTA-FEIRA</header>
+    <div class="day-shift">Manhã</div>
+    <div class="user-choice">
+      <span>{{ users[8].name | uppercase }}</span>
+    </div>
+    <div class="day-shift">Tarde</div>
+    <div class="user-choice">
+      <span>{{ users[9].name | uppercase }}</span>
+    </div>
+  </div>
+</div>
+
+<button class="btn btn-print no-print" (click)="print()" *ngIf="users && users.length > 0">
+  <i class="fa fa-print fa-2x"></i>
+</button>

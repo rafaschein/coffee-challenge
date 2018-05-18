@@ -26,3 +26,9 @@ html, body {
 .text-right {
   text-align: right;
 }
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
